@@ -46,9 +46,9 @@
     font-size: 16px;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 a {
   text-decoration: none;
@@ -136,6 +136,11 @@ h2 {
 
 .hex-item .content span {
   font-size: min(2rem, 5vw);
+}
+
+.portfolio h2 {
+  font-size: min(10vw, 4.4rem);
+  position: relative;
 }
 
 .tech-stack .orange {
@@ -258,9 +263,9 @@ header {
 }
 
 @media only screen and (max-width: 600px ){
-  .header-feature {
+  /* .header-feature {
     display:none;
-  }
+  } */
 }
 
 header li + li {
@@ -349,8 +354,17 @@ footer .socials {
   text-align: center;
 }
 
+.header-feature a {
+  display: block;
+
+}
+
 .logo-container {
   width: 5rem;
+}
+
+.portfolio {
+  padding: 0 min(1rem, 3vw);
 }
 
 .tech{
@@ -368,6 +382,10 @@ footer .socials {
 
 .tech-stack .stack-options {
   /* flex: 1 1 70%; */
+}
+
+textarea {
+  max-width: 15rem;
 }
 
 
@@ -414,17 +432,38 @@ footer .socials {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.portfolio > div > h2 {
+  margin-top: min(10vw,1rem);
+  margin-bottom: min(10vw, 2rem);
+}
+
+.portfolio h2::after {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  width: min(30rem, 50vw);
+  min-height: 100%;
+  border-bottom: 3px solid var(--off-white-color);
+
+}
+
 
 /*Tech Stack Hex Grid
 inspired by: https://ninjarockstar.dev/css-hex-grids/
 **/
 
 .tech-stack {
-  margin: 2rem 0;
-  padding: min(2vw, 3rem);
+  margin: 2rem 0 0 0;
+  padding: min(2vw, 10rem);
   position: relative;
   background: linear-gradient(90deg, var(--black-bg-color) 21px, transparent 1%) center, linear-gradient(var(--black-bg-color) 21px, transparent 1%) center, #a799cc;
   background-size: 22px 22px;
+}
+
+@media (min-width: 1000px) and (max-width: 1439px){
+  .tech-stack {
+    padding: 0 min(10vw, 10rem);
+  }
 }
 
 .tech-stack h2 {
@@ -812,16 +851,38 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   /* box-shadow: 50rem 50rem 50rem 50rem white; */
+
+}
+.hex-item > .content:hover {
+
+  /* cursor: pointer; */
+}
+
+.hex-item {
+  transition: all .5s ease;
+}
+
+.hex-item:hover {
+  filter: drop-shadow(0rem 0rem .5rem white);
+}
+
+.hex-item.teal-shadow:hover {
+  filter: drop-shadow(0rem 0rem .5rem var(--teal-color));
+}
+
+.hex-item.orange-shadow:hover {
+  filter: drop-shadow(0rem 0rem .5rem var(--orange-color));
 }
 
 /**Portfolio Grid**/
 .portfolio .grid-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
   grid-auto-rows: 1px;
   max-width: 1500px;
   margin: 0 auto;
+  /* transition: all .5s ease; */
 }
 
 @media only screen and (max-width: 500px) {
@@ -836,18 +897,25 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
 }
 
 .portfolio .grid-item {
-  border-radius: 2px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   /* padding: min(2rem, 10vw); */
-  transition: all .5s ease;
+
+  box-shadow: 0 0 15px -2px rgba(255,136,105, .8);
 }
 
 .portfolio .feature-card {
   padding: min(2rem, 2vw);
   grid-column: 2/4;
   grid-row:1 ;
+}
+
+@media (min-width: 1361px) {
+  .portfolio .feature-card {
+    grid-column: 1/4;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 750px) {
@@ -860,6 +928,12 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
   .portfolio .feature-card {
     grid-column: 1/3;
   }
+
+  .portfolio .grid-item .description-short{
+    font-size: .75rem;
+  }
+
+
 }
 
 
@@ -875,7 +949,7 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
   white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 1rem;
+  margin-bottom: .25rem;
 }
 
 .feature-button {
@@ -898,6 +972,15 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
   margin: .25rem 0;
   font-size: .75rem;
   margin-top: .5rem;
+  display: block;
+}
+
+.portfolio .feature-card a {
+  color: rgb(41,41,41);
+  border: 2px solid rgb(41,41,41);
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: var(--off-white-color);
 }
 
 .portfolio .portfolio-piece {
@@ -1059,6 +1142,10 @@ inspired by: https://ninjarockstar.dev/css-hex-grids/
 .portfolio-piece:hover .portfolio-media img{
   transform: scale(1.1);
   /* cursor: pointer; */
+}
+
+.portfolio-piece:hover {
+  box-shadow:  0 0 15px 2px rgba(255,136,105, .8);
 }
 
 

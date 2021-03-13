@@ -46,8 +46,8 @@
           <span class='name'>B<span>autista</span></span>
           <span class='last-name'>V<span>istro</span></span>
         </div>
-        <div class="call-for-action flex-container flex-center">
-          <a class='header-direct' href="#">Software Engineer</a>
+        <div class="call-for-action">
+          <a class='header-direct' href="#bio">Software Engineer</a>
           <a href="#bio">
             <img class='icon' src="./assets/icons/arrow-orange.png" alt="arrow icon">
           </a>
@@ -83,7 +83,7 @@
           <img src="assets/logo/logo-dark.png" alt="logo">
         </div> -->
         <ul class="stack-options grid-container">
-          <li class="hex-item">
+          <li class="hex-item teal-shadow">
             <div class="content teal">
 
               <span>JS</span>
@@ -94,12 +94,12 @@
               <img src="assets/logo/logo-dark.png" alt="logo">
             </div>
           </li>
-          <li class="hex-item">
+          <li class="hex-item orange-shadow">
             <div class="content orange">
               <span>HTML</span>
             </div>
           </li>
-          <li class="hex-item">
+          <li class="hex-item teal-shadow">
             <div class="content teal">
               <span>CSS</span>
             </div>
@@ -109,12 +109,12 @@
               <span>Node.JS</span>
             </div>
           </li>
-          <li class="hex-item">
+          <li class="hex-item orange-shadow">
             <div class="content orange">
               <span>GIT</span>
             </div>
           </li>
-          <li class="hex-item">
+          <li class="hex-item teal-shadow">
             <div class="content teal">
               <span>MongoDB</span>
             </div>
@@ -124,7 +124,7 @@
               <span>React</span>
             </div>
           </li>
-          <li class="hex-item">
+          <li class="hex-item orange-shadow">
             <div class="content orange">
               <span>Adobe XD</span>
             </div>
@@ -133,6 +133,7 @@
       </section>
     </section>
     <section id='portfolio' class='portfolio'>
+      <div class="readable-width"><h2>Portfolio Pieces</h2></div>
       <section class='grid-container'>
         <!-- <div class="grid-item title-card">
           <div class='content'>
@@ -149,17 +150,17 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                   <h3>Tic Tac Toe Beans</h3>
-                  <p class='description-short'>Tic Tac Toe Beans was an excellent excersize in diving head first into OOP. The original challenge was to build a two-player tic-tac toe game that displayed winners on the DOM.... </p>
+                  <p class='description-short'>Made for a coding challenge. Tic Tac Toe Beans was an excellent exercise in diving head first into OOP..... </p>
                   <button class='feature-button' type="button" name="button">Read More</button>
-                  <p class='description hidden'>Tic Tac Toe Beans was an excellent excersize in diving head first into OOP. The original challenge was to build a two-player tic-tac toe game that displayed winners on the DOM.</p>
+                  <div class='description hidden'><p>Made for a coding challenge. Tic Tac Toe Beans was an excellent exercise in diving head first into OOP. The original challenge was to build a two-player tic-tac-toe game that displayed winners on the DOM. Nothing was explicitly tasked to be an object, but I thought it would be a fun to see how far I can quickly abstract a simple board game.</p><p>My first idea was to dissect the tiles into its key features as it was the most numerous and therefore had the highest quantitative chance of shortening my code. I then made the boardgame into its own object type. While this wasn't absolutely necessary, I wanted practice reducing the number of global variables by keeping them scoped within objects and having an initializing function 'start' the game. Making the gameboard an abstracted class makes it more portable and allows for the posibility for board sizes beyond 3 x 3</p><p>I also abstracted the players into their own class which allowed me to quickly change between text markers on the tiles to images</p><p>I also added disabled states with corresponding styling to tiles so that there are visual cues for the user to understand the game state rather than depend on a text prompt.</p><p>My biggest challenge was checking for win & tie states. I mistakenly added object dependency from the tiles to the gameboard in an attempt to make win checking more efficient. As a result, checking for a win state created more dependencies between tiles, objects and players. If I were to improve this game, I would better encapsulate the gameboard's role in handling, win/tie states and player turn shifting. While the project was to rapidly prototype the application, I would have found more efficient and readable results if I took a few more minutes to pre-plan object dependencies and roles.</p></div>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="http://jpmbvistro-tictactoebeans.netlify.app/">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#oop</li>
+                  <li>#design</li>
+                  <li>#app</li>
+                  <li>#customtheme</li>
                 </ul>
               </div>
             </div>
@@ -173,17 +174,17 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                 <h3>To-Do List</h3>
-                <p class='description-short'>This project was made for a coding challenge to create a to-do list. I wanted to incorporate my brand's aesthetic into the project... </p>
+                <p class='description-short'>Learning the subtleties of UX/UI design... </p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>This project was made for a coding challenge to create a to-do list. I wanted to incorporate my brand's aesthetic into the project. I wanted to make it look like a productivity tool I would use daily.</p>
+                <div class='description hidden'><p>This project was made for a coding challenge to create a to-do list. I initially implemented the program with checkboxes which visually struckthrough tasks using a css sibling state change. I was later challenged to implement the program without the checkbox as it better adhered to the separation of concerns by shifting functionality to javascript rather than css.</p><p>I decided to try to make the interface more intuitive by allowing users to click tasts to complete them. Since clicking a task can visually suggest editing or completing a task, I added a translucent edit button (which becomes opaque on hover) to suggest to users that editing can only be achieved through the button, which (hopefully) gets users to deduce that clicking the task completes it rather than edits it.</p><p>I also added small QoL features such as being able to finish editing the task by clicking away or pressing enter, exiting from editing if the entire tast is backspaced, and automatically enter editing mode when clicking on an empty task (which normally would signal a completion)</p> </div>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="https://jpmbvistro-to-do.netlify.app/"> Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
+                  <li>#ux</li>
                   <li>#Design</li>
                   <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#customtheme</li>
                 </ul>
               </div>
             </div>
@@ -202,12 +203,12 @@
                 <p class='description hidden'>I made this calculator for a coding challenge that required me to build the application using vanilla JS, HTML and CSS only. I wanted to make the application functional and aesthetically aligned with what I would normally use. A fun project in using the DOM to store variables.</p>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="https://jpmbvistro-simple-calc.netlify.app/">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#design</li>
+                  <li>#app</li>
+                  <li>#customtheme</li>
+                  <li>#responsive</li>
                 </ul>
               </div>
             </div>
@@ -221,17 +222,17 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                 <h3>True Color</h3>
-                <p class='description-short'>Built using HTML, CSS, and JS... </p>
+                <p class='description-short'>Colors for everyone... </p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>I made this color generator for a coding challenge that required me to build a horoscope using vanilla JS, HTML and CSS only. I wanted to dedicate this application to those who didn't know their birthdate or don't want to celebrate it. Also, I didn't want to make 12 outputs and instead make a simple algorithm using the inputs.</p>
+                <p class='description hidden'>I made this color generator for a coding challenge that required me to build a horoscope using vanilla JS, HTML and CSS only. I wanted to dedicate this application to those who didn't know their birthdate or don't want to celebrate it. Since I know star charts are a big part of certain cultures, I didn't want to reduce the complexity of it to 12 preset horoscopes. Instead I made an algorithm which produces a unique color from the Hex Spectrum as well as its corresponding hex code for use.</p>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="https://jpmbvistro-true-color.netlify.app/">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#algorithm</li>
+                  <li>#design</li>
+                  <li>#app</li>
+                  <li>#customtheme</li>
                 </ul>
               </div>
             </div>
@@ -245,17 +246,19 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                 <h3>Portfolio 2.0</h3>
-                <p class='description-short'>I made this calculator for a coding challenge that required me to build the application using vanilla JS, HTML and CSS... </p>
+                <p class='description-short'>The second iteration of the portfolio you see here... </p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class='description hidden'><p>I wanted to be sure to include the site itself in my portfolio. Custom made, without a template, using HTML, CSS, and Vanilla JS. I wanted to streamline my portfolio from its previous iteration, focusing on my work as a software engineer and including some interactive elements.</p><p>The header includes a mouse-over animation that expands my the initials in my handle to their respective names. The animation is a call back to my experiences having to pare down my name as its fairly long. My name already reflects my culture's complex relationship with colonization as each of my names are Hispanic in origin. I decided that this portfolio would be an approppropriate means of sharing my full name without being the focal point of the site.</p><p>When choosing how to display my technology stack, I was tempted to display a percent bar indicating my percieved ability/proficiency with each of the technologies. I found this a little confusing and misleading. Is my proficiency with a particular piece of technology measure by my application of it or my comprehension of it? And are these measurements in relation to each other? This suggests I am the least proficient in something, but that visualization might be misconstrued as in competance while in fact I might be very competant with it but just not as so as with my other skills. If you would like to know what I am proficient in, and what I am not, this portfolio should provide a better indication.
+                </p>
+                <p>My favorite part of building this has been building the masonry layout of my works. I wanted a way of displaying my work that was fun and interactive, showcased my knowledge of complex layouts built with advanced CSS and JS features. </p><p>Special credit goes to Jesse Breneman and Andy Barefoot whose articles helped build the hex grid and masonry layout respectively. </p></div>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#js</li>
+                  <li>#responsive</li>
+                  <li>#design</li>
+                  <li>#css</li>
+                  <li>#customtheme</li>
                 </ul>
               </div>
             </div>
@@ -269,17 +272,17 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                 <h3>Yelp Remake</h3>
-                <p class='description-short'>I made this calculator for a coding challenge that required me to build the application using vanilla JS, HTML and CSS... </p>
+                <p class='description-short'>An attempt to recreate the yelp layout and mobile responsiveness. </p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>sequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class='description hidden'>Wanting to test out my HTML and CSS flexibility, I attempted recreating Yelp's landing page from scratch (using my own photography for the hero image of course). The recreation of the page was a great exercise in info card creation and making a multi-part search bar look seemless.</p>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="https://jpmbvistro-yelp-recreation.netlify.app/">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#responsive</li>
+                  <li>#design</li>
+                  <li>#css</li>
+                  <li>#recreation</li>
                 </ul>
               </div>
             </div>
@@ -293,17 +296,16 @@
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
                 <h3>Responsive NYT</h3>
-                <p class='description-short'>Lo reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lo reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class='description-short'>The subtleties of news layouts</p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>Lo reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class='description hidden'>For this exercise, I utilized a recent screenshot of the NYT Landing page and attempted to recreate it using only HTML and CSS. While nderstanding that most modern layouts will primarily utilize flex-box and grid, I wanted practice utilizing floats as a means of creating layouts. I want to ensure that my ability to create intuitive and responsive layouts span both older and newer means as not all web applications utilize the same strategies.</p>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <a class='portfolio-external-link' target="_blank" rel="noopener noreferrer" href="https://jpmbvistro-nyt-recreation.netlify.app">Visit the Application Here</a>
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#design</li>
+                  <li>#news</li>
+                  <li>#float</li>
                 </ul>
               </div>
             </div>
@@ -316,18 +318,18 @@
             </div>
             <div class="portfolio-details flex-container flex-column flex-spread">
               <div class="">
-                <h3>In the News</h3>
-                <p class='description-short'>I made this calculator f... </p>
+                <h3>Keep up with the News</h3>
+                <p class='description-short'>Keep up with current news and more!</p>
                 <button class='feature-button' type="button" name="button">Read More</button>
-                <p class='description hidden'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class='description hidden'><p>An application made using only HTML, CSS, JS and public APIs. I wanted to test the capabilities of having one API provide information used in another APi. I thought that the news typically gives a nice introduction into what's happening in the world, but I thought it would be even better to get related books to the topic.</p><p>I quickly learned that directly passing all related keywords to an API's search query may yield limited results based on how niche and numerous the keywords are.</p><p>If I were to reimplement this application, I would parse individual keywords into their own search queries rather than all keywords into one search query.</p></div>
               </div>
               <div class="">
-                <a class='portfolio-external-link' href="#">Visit the Application Here</a>
+                <!-- <a class='portfolio-external-link' href="#">Visit the Application Here</a> -->
                 <ul class='portfolio-tags'>
-                  <li>#OOP</li>
-                  <li>#Design</li>
-                  <li>#APP</li>
-                  <li>#CustomTheme</li>
+                  <li>#news</li>
+                  <li>#api</li>
+                  <li>#app</li>
+                  <li>#customtheme</li>
                 </ul>
               </div>
             </div>
